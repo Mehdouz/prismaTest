@@ -1,0 +1,47 @@
+@import "../variables.scss";
+
+.contentSectionAd {
+  background: #fff;
+  padding: 35px 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    &__content {
+      @media (min-width: $viewport-m) {
+        padding-right: 75px;
+      }
+      &__title {
+        font-size: $font-size-m;
+        font-weight: $font-weight-bold;
+        margin-bottom: 30px;
+        text-align: center;
+        @media (min-width: $viewport-m) {
+          padding-right: 75px;
+          margin-bottom: 22px;
+          text-align: left;
+        }
+      }
+      &__txt {
+        font-size: $font-size-m;
+        line-height: 22px;
+        text-align: center;
+        @media (min-width: $viewport-m) {
+          text-align: left;
+        }
+      }
+    }
+    &__ad {
+      display: none;
+      padding-right: 25px;
+      height: 100%;
+      @media (min-width: $viewport-m) {
+        display: block;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding: 100px 0;
+  }
+}

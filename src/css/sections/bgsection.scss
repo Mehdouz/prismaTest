@@ -1,0 +1,17 @@
+@import "../variables.scss";
+
+.bgSection {
+  overflow: hidden;
+  @media (min-width: $viewport-m) {
+    min-height: 250px;
+  }
+  &--small {
+    @media (min-width: $viewport-m) {
+      min-height: 135px;
+    }
+  }
+  &__bg {
+    width: 100%;
+    display: block;
+  }
+}

@@ -1,0 +1,106 @@
+@import "../variables.scss";
+
+.footer {
+  background-color: #181818;
+  padding: 60px 0;
+  color: $color-footer;
+  position: relative;
+  font-size: $font-size-xs;
+  width: 100%;
+  overflow-x: hidden;
+  &__bgImage {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+    display: block;
+  }
+  &__title {
+    display: none;
+    text-align: center;
+    color: $color-footer;
+    margin-bottom: 45px;
+    z-index: 20;
+    position: relative;
+    @media (min-width: $viewport-m) {
+      display: block;
+    }
+  }
+  &__sections {
+    z-index: 20;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media (min-width: $viewport-m) {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+    &__list {
+      width: 50%;
+      text-align: center;
+      @media (min-width: $viewport-m) {
+        width: 33%;
+        text-align: left;
+      }
+      &__item {
+        margin-bottom: 20px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      &--middle {
+        text-align: center;
+      }
+    }
+    &__socials {
+      width: 100%;
+      margin-top: 75px;
+      @media (min-width: $viewport-m) {
+        width: 33%;
+        margin-top: inherit;
+      }
+      &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @media (min-width: $viewport-m) {
+          width: 140px;
+          right: 0;
+          position: absolute;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        &__title {
+          color: $color-footer;
+          text-align: center;
+          text-transform: uppercase;
+          width: 50%;
+          @media (min-width: $viewport-m) {
+            width: inherit;
+            margin-bottom: 15px;
+          }
+        }
+        &__list {
+          width: 50%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          @media (min-width: $viewport-m) {
+            width: inherit;
+            justify-content: space-between;
+          }
+          &__item {
+            margin-right: 20px;
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

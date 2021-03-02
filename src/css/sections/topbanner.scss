@@ -1,0 +1,42 @@
+@import "../variables.scss";
+
+.topBanner {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  background-image: url("../img/header.jpeg");
+  background-position: center;
+  background-size: cover;
+  min-height: 375px;
+  @media (min-width: $viewport-m) {
+    background-image: inherit;
+    min-height: 500px;
+  }
+  &__logoContainer {
+    height: 100%;
+    display: none;
+    @media (min-width: $viewport-m) {
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__logo {
+      width: 738px;
+      display: block;
+      margin-top: 95px;
+    }
+  }
+
+  &__bg {
+    display: none;
+    @media (min-width: $viewport-m) {
+      display: block;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      z-index: -10;
+      position: absolute;
+    }
+  }
+}

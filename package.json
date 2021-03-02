@@ -1,0 +1,17 @@
+{
+  "name": "prismatest",
+  "version": "1.0.0",
+  "description": "Test technique Prisma",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html --out-dir public",
+    "build": "parcel build ./src/index.html --out-dir public --public-url ./",
+    "clean": "rm -rf public .cache && rm -rf node_modules"
+  },
+  "author": "Mehdi M'CIRDI - mehdimcirdi.pro@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.32.8"
+  }
+}
